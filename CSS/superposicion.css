@@ -1,0 +1,327 @@
+/* Sección que contiene los paneles */
+#works-section {
+    position: relative;
+    height: 400vh;
+    /* Altura total para 5 paneles de 100vh y 50 extra para que el último también se quede un poco fijo */
+    margin: 0;
+    /*padding: -100px;
+    /* background-color: red;*/
+    display: block;
+
+}
+
+/* Cada panel ocupa 100vh y se fija con sticky */
+.panel {
+    position: sticky;
+    background-color: rgba(0, 0, 0, 0.8);
+    top: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 2em;
+    z-index: 0;
+    /* Base para superponer */
+    transition: transform 0.5s ease, opacity 0.3s ease, background-color 1s ease;
+    border-radius: 50px 50px 0px 0px;
+
+}
+
+/* Colores y z-index para que el siguiente aparezca encima */
+.panel1 {
+    /*background-color: #18ff13;*/
+    z-index: 1;
+}
+
+.panel2 {
+    /*background-color: #ff13a1;*/
+    z-index: 2;
+}
+
+.panel3 {
+    /*background-color: #13a1ff;*/
+    z-index: 3;
+}
+
+.panel4 {
+    /*background-color: #a1ff13;*/
+    z-index: 4;
+}
+
+.panel5 {
+    /*background-color: #a1f542;*/
+    z-index: 5;
+}
+
+
+.panel h2 {
+    font-size: 80px;
+    margin-bottom: 0.5em;
+    position: absolute;
+    display: flex;
+    left: 10%;
+    top: 10%;
+    z-index: 2;
+    transform: translateY(-35px)
+}
+
+
+.caja_img {
+    position: relative;
+    width: 70%;
+    height: 70%;
+    background-color: black;
+    overflow: hidden;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+
+.contenedor-imagenes {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+
+}
+
+.img-box {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+    transition: flex 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.panel1 .img-box img {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s ease;
+}
+.panel2 .img-box img {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s ease;
+}
+.panel3 .img-box img {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s ease;
+}
+
+.panel4 .img-box img {
+    width: 100%;
+    height: 100%;
+    object-position: 0px;
+    transition: transform 0.3s ease;
+}
+
+/* Se agranda horizontalmente */
+.img-box:hover {
+    flex: 8;
+    
+}
+
+/* Efecto de zoom al hacer hover */
+.img-box:hover img {
+    transform: scale(1.2);
+    
+}
+
+/* Ajustes para paneles sin contenedor-imagenes (como panel3 y panel5) */
+.panel .caja_img img {
+    max-width: 200%;
+    max-height: 100%;
+    object-fit: cover;
+}
+
+/* Colores distintos *//*
+.box1 {
+    background-color: #ff4d4d;
+}
+
+.box2 {
+    background-color: #4d94ff;
+
+}
+
+.box3 {
+    background-color: #4dff4d;
+
+}
+
+.box4 {
+    background-color: #ffd24d;
+}*/
+
+.texto_debajo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 3%;
+    bottom: 7%;
+    gap: 20px;
+    z-index: 2;
+    pointer-events: none;
+    transform: translateY(-20px);
+    text-shadow: 2px 2px #2a2a2a;
+
+}
+
+/*
+.texto_debajo p {
+    font-size: 1.3em;
+    margin-bottom: 0.5em;
+    color: white;
+
+}*/
+/*
+.texto_debajo a {
+
+    color: white;
+    z-index: 2;
+    text-decoration: none;
+}*/
+
+
+
+.texto_debajo .enlace-completo {
+    display: flex;
+    justify-content: space-between;
+    text-decoration: none;
+    color: #ffdb67;
+    width: 100%;
+}
+/*
+.texto_debajo p {
+    align-content: center;
+}
+
+.texto_debajo p,
+.texto_debajo .icon-right {
+    pointer-events: auto;
+ 
+}*/
+
+
+.enlace-completo {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+}
+
+.enlace-completo:hover{
+    border-radius: 50px 50px 0px 0px;
+    background-color: rgb(40,36,42);
+}
+
+.enlace-completo img {
+    transition: transform 0.3s ease;
+    transform: scale(1);
+}
+
+.enlace-completo img:hover {
+    transition: transform 0.3s ease;
+    transform: scale(1.5) translateY(50px);
+
+}
+
+
+.enlace-completo:hover p,
+.enlace-completo:hover .icon-right {
+    color: #ffdb67;
+
+}
+
+.icon-right {
+    text-decoration: none;
+    color: white;
+    font-size: 50px;
+}
+
+.flecha_derecha {
+    width: 100px;
+    height: 100px;
+
+}
+
+
+
+/*************************
+        Responsive
+**************************/
+
+
+
+
+
+@media (max-width: 576px)  {
+    .panel h2{
+        font-size: 40px;
+    }
+    /*.texto_debajo p {
+    font-size: 25px;
+margin-left: 10px;
+    }
+    
+    .flecha_derecha {
+    width: 50px;
+        align-content: center;
+        
+        font-size: 20px;
+    }*/
+
+}
+
+@media (min-width:577px) and (max-width: 768px) {
+    .panel h2{
+        font-size: 60px;
+    }
+}
+/*
+@media (min-width: 1200px) {
+    .enlace-completo img:hover {
+    transition: transform 0.3s ease;
+    transform: scale(1.5) translateY(70px);
+
+}
+
+}*/
+
+@media (max-width: 768px)  {
+    .panel1 .img-box { display: none; }
+    .panel1 .img-box.box1 { display: block; }
+    
+    .panel2 .img-box { display: none; }
+    .panel2 .img-box.box2 { display: block; }
+    
+    .panel3 .img-box { display: none; }
+    .panel3 .img-box.box1 { display: block; }
+    
+    .panel4 .img-box { display: none; }
+    .panel4 .img-box.box2 { display: block; }
+    
+    .panel .img-box img {
+        width: 100%;
+        height: 100%;
+        display: block;
+    }
+
+}

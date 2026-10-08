@@ -1,0 +1,200 @@
+footer {
+    background-color: #2a2a2a;
+    color: #fff;
+    padding: 20px 40px;
+    font-family: sans-serif;
+    position: relative;
+}
+
+.flecha_arriba {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    bottom: 0;
+    right: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    padding-top: 50px;
+
+}
+
+.icon-up {
+    color: white;
+    transition: color 0.3s ease;
+    text-decoration: none;
+}
+
+.colorFlecha {
+    color: #000;
+    transition: color 0.3s ease;
+}
+
+
+.footer-contenido {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0px 40px 20px 40px;
+    transition: margin 1s ease;
+
+}
+
+.footer-creacion {
+    display: flex;
+    flex-direction: column;
+    padding-top: 50px;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+    
+}
+
+.footer-creacion p {
+    margin: 5px 0;
+    font-size: 15px;
+    font-weight: 300;
+
+}
+
+.footer-enlaces {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 100%;
+}
+
+.footer-enlaces a {
+    margin: 0 10px;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+
+}
+
+.footer-enlaces p a {
+    text-transform: lowercase;
+    font-weight: normal;
+}
+
+
+
+.footer-enlaces .redes {
+    display: flex;
+    gap: 10px;
+    
+}
+
+.footer-enlaces .correo {
+    margin-left: -25px;
+    
+}
+
+.footer-enlaces a:hover {
+    color: #ffdb67;
+
+}
+
+.lineaSeparadora02 {
+    height: 5px;
+    width: 100%;
+    margin-top: 50px;
+    background-color: #ffdb67;
+    border-radius: 100px;
+    
+}
+
+.redes a{
+    text-transform: uppercase;
+}
+
+/*************************
+        Responsive
+**************************/
+
+
+@media (max-width: 446px) {
+
+    .footer-contenido {
+
+    margin: 0;
+        
+
+}
+   .footer-enlaces {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  .redes {
+    display: flex;
+    flex-direction: column
+  }
+    .footer-enlaces p {
+        display: flex;
+    flex-direction: column;
+    align-items: center;
+        
+}
+     
+}
+
+
+@media (max-width: 768px) {
+
+     .footer-contenido {
+
+    margin: 0;
+         
+
+}
+    .footer-enlaces {
+    margin-top: 50px;
+    display: block;
+    justify-content: space-between;
+    justify-items: center;
+    text-align: center;
+    width: 100%;
+    
+    }
+
+    .footer-enlaces p {
+    text-transform: lowercase;
+    font-weight: normal;
+            margin-top: 50px;
+        
+}
+    .lineaSeparadora02 {
+    height: 5px;
+    width: 100%;
+    margin-top: 10px;
+    background-color: #ffdb67;
+    border-radius: 100px;
+    
+}
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+  .footer-contenido {
+    margin: 0px 20px 20px 20px;
+      transition: margin 1s ease;
+  }
+    
+    .footer-enlaces {
+    margin-top: 50px;
+    display: block;
+    justify-content: space-between;
+    justify-items: center;
+    text-align: center;
+    width: 100%;
+     
+    }
+}
+

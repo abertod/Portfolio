@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <title>Alberto Damigo</title>
+    <meta charset="utf-8">
+    <meta name="description" content="&lt;model-viewer&gt; template">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="CSS/global.css">
+    <link type="text/css" href="CSS/styles.css" rel="stylesheet" />
+    <link rel="stylesheet" href="CSS/header.css">
+    <link rel="stylesheet" href="CSS/main.css">
+    <link rel="stylesheet" href="CSS/fontello.css">
+    <link rel="stylesheet" href="CSS/superposicion.css">
+    <link rel="stylesheet" href="CSS/footer.css">
+    <link rel="stylesheet" href="CSS/Carrusel_imagenes.css">
+    <link rel="stylesheet" href="CSS/css_bootstrap/bootstrap.min.css">
+
+
+    <!-- ******** Fuentes ********** -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Alfa+Slab+One&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Tienne:wght@400;700;900&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <header>
+       <div class="caja-barras">
+        <div class="menu-barras" id="menu-barras">
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </div>
+        </div>
+
+
+        <nav class="menu" id="menu">
+            <div class="menu-content">
+                <ul class="menu-links">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li class="submenuPadre">
+                        <a href="Portafolio.html">Trabajos</a>
+                        <ul class="submenu">
+                            <li><a href="render.html">Render</a></li>
+                            <li><a href="modelado.html">Modelado 3D</a></li>
+                            <li><a href="infografia.html">Infografía 3D</a></li>
+                            <li><a href="escultura.html">Escultura digital</a></li>
+                            
+                            
+                        </ul>
+                    </li>
+                    <!--<li><a href="sobreMi.html">Sobre mí</a></li>-->
+                    <li><a href="contacto.html">Contacto</a></li>
+                    <li class="submenuPadre">
+                        <a href="juntarPortfolios.html">Portfolios</a>
+                        <ul class="submenu">
+                            <li><a href="portfolioModelado.html">Portfolio Modelado</a></li>
+                            <li><a href="portfolioWeb.html">Portfolio Diseño Gráfico</a></li>
+                            <li><a href="portfolio3D.html">Portfolio Diseño de interiores</a></li> 
+                        </ul>
+                    </li>
+                </ul>
+                <div class="menu-social">
+                    <a href="https://www.artstation.com/aldamigo" class="icon-artstation_icon" target="_blank" rel="noopener noreferrer"></a>
+                    <a href="https://www.instagram.com/a_bertod" class="icon-instagram" target="_blank" rel="noopener noreferrer"></a>
+                    <a href="https://www.linkedin.com/in/alberto-damigo/" class="icon-linkedin-squared" target="_blank" rel="noopener noreferrer"></a>
+                </div>
+            </div>
+        </nav>
+
+    </header>
+
+
+
+
+    <!-- <model-viewer> HTML element -->
+    <section class="viewer-Seccion">
+        <!--<model-viewer src="OBJ/Escultura_texturizada.glb" ar ar-modes="scene-viewer webxr quick-look" interaction-prompt="none" camera-controls tone-mapping="neutral" poster="IMG/poster.webp" shadow-intensity="1" exposure="1" environment-image="legacy" touch-action="pan-y" camera-orbit="calc(3rad + env(window-scroll-y) * 6.5rad) calc(90deg + env(window-scroll-y) * 0deg) 5m">
+            <!-- camera-orbit="calc(0rad + env(window-scroll-y) * 6rad)  calc(90deg + env(window-scroll-y) * -30deg) calc(5m + env(window-scroll-y) * -5m)" 
+            <div class="progress-bar hide" slot="progress-bar">
+                <div class="update-bar"></div>
+            </div>
+            <button slot="ar-button" id="ar-button">
+                View in your space
+            </button>
+            <div id="ar-prompt">
+                <img src="IMG/ar_hand_prompt.png">
+            </div>
+        </model-viewer>-->
+
+        <model-viewer id="viewer" src="OBJ/Escultura_texturizada.glb"  interaction-prompt="none"  tone-mapping="neutral" poster="IMG/poster.webp" shadow-intensity="1" camera-orbit="-169.6deg 82.83deg 4.854m" exposure="1" environment-image="legacy" touch-action="pan-y" >
+
+            <div class="progress-bar hide" slot="progress-bar">
+                <div class="update-bar"></div>
+            </div>
+            <!--<button slot="ar-button" id="ar-button">View in your space</button>
+            <div id="ar-prompt">
+                <img src="IMG/ar_hand_prompt.png">
+            </div>-->
+        </model-viewer>
+
+
+        <h1 class="nombre display-font">
+            ALBERTO DAMIGO
+        </h1>
+        <div class="Separador ">Otros trabajos</div>
+    </section>
+
+
+    <section id="works-section">
+        <div class="panel panel1">
+            <h2>Render</h2>
+
+            <a href="render.html" class="enlace-completo">
+                <div class="caja_img">
+                    <div class="contenedor-imagenes">
+                        <div class="img-box box1"><img src="IMG/Renders/TibuXe/Tibu01.jpg" alt="img1" /></div>
+                        <div class="img-box box2"><img src="IMG/Renders/Low-Poly/perro7-min.png" alt="img2" /></div>
+                    </div>
+                </div>
+
+                <!--<div class="texto_debajo">
+                     <p>Maya / Blender / 3ds Max</p>
+                    <span class="flecha_derecha icon-right"></span>
+                </div>-->
+                
+            </a>
+        </div>
+
+        <div class="panel panel2">
+            <h2>Modelado 3D</h2>
+            <a href="modelado.html" class="enlace-completo">
+                <div class="caja_img">
+                    <div class="contenedor-imagenes">
+                        <div class="img-box box1"><img src="IMG/Modelado_3D/Videojuego/Wip_Arma_Ratchet.png" alt="img1" /></div>
+                        <div class="img-box box2"><img src="IMG/Modelado_3D/Videojuego/Metabee01.png" alt="img2" /></div>
+                        <div class="img-box box3"><img src="IMG/Modelado_3D/Videojuego/Hacha.png" alt="img3" /></div>
+                        
+                    </div>
+                </div>
+                
+                <!--<div class="texto_debajo">
+                    <p>Maya / Blender</p>
+                    <span class="flecha_derecha icon-right"></span>
+                </div>-->
+                
+            </a>
+        </div>
+
+        <div class="panel panel3">
+            <h2>Infografías 3D</h2>
+            <a href="infografia.html" class="enlace-completo">
+               <div class="caja_img">
+                    <div class="contenedor-imagenes">
+                        <div class="img-box box1"><img src="IMG/Infografia_3D/Interior02/Habitacion02.webp" alt="img1" /></div>
+                        <div class="img-box box2"><img src="IMG/Infografia_3D/Interior01/Imagen04.webp" alt="img2" /></div>
+                            
+                    </div>
+                </div>
+                
+                <!--<div class="texto_debajo">
+                    <p>Maya / Blender</p>
+                    <span class="flecha_derecha icon-right"></span>
+                </div>-->
+            </a>
+        </div>
+        
+
+
+        <div class="panel panel4">
+            <h2>Escultura digital</h2>
+            <a href="escultura.html" class="enlace-completo">
+               <div class="caja_img">
+                    <div class="contenedor-imagenes">
+                        <!--<div class="img-box box1"><img src="IMG/Escultura_digital/Escultura_ella/Escultura02.jpg" alt="img1" /></div>-->
+                        <div class="img-box box2"><img src="IMG/Escultura_digital/T-rex/03_Pose.webp" alt="img2" /></div>
+                            
+                    </div>
+                </div>
+                
+                <!--<div class="texto_debajo">
+                    <p>Zbrush</p>
+                    <span class="flecha_derecha icon-right"></span>
+                </div>-->
+            </a>
+            
+            
+        </div>
+        
+        
+        
+    </section>
+    <!--<section class="separacion2"></section>-->
+
+
+
+    <section>
+
+        <div class="lineaSeparadora">
+
+        </div> 
+    </section>
+
+
+   
+    <!-- Esto llama a la pagina footer.html -->
+    <div id="footer"></div>
+
+    
+
+    <!--***************************-->
+
+        <script src="JS/menu.js"></script>
+        <script src="JS/script.js"></script>
+        <script src="JS/Main.js"></script>
+        <script src="JS/Superposicion.js"></script>
+<script src="JS/Carrusel_imagenes.js"></script>
+       <script src="JS/footer.js"></script>
+        <!-- Loads <model-viewer> for browsers: -->
+        <!--<script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>-->
+        <script type="module" src="JS/model-viewer.min.js"></script>
+        <script src="JS/js_bootstrap/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,230 @@
+/*
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Alfa+Slab+One&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Tienne:wght@400;700;900&display=swap" rel="stylesheet">
+
+
+
+.abril-fatface-regular {
+  font-family: "Abril Fatface", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+
+/****************
+.playfair-display-sc-regular {
+  font-family: "Playfair Display SC", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.playfair-display-sc-bold {
+  font-family: "Playfair Display SC", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.playfair-display-sc-black {
+  font-family: "Playfair Display SC", serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.playfair-display-sc-regular-italic {
+  font-family: "Playfair Display SC", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.playfair-display-sc-bold-italic {
+  font-family: "Playfair Display SC", serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.playfair-display-sc-black-italic {
+  font-family: "Playfair Display SC", serif;
+  font-weight: 900;
+  font-style: italic;
+}
+****************/
+
+
+/*
+// <weight>: Use a value from 300 to 700
+// <uniquifier>: Use a unique and descriptive class name
+.cormorant-garamond-<uniquifier> {
+  font-family: "Cormorant Garamond", serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+
+
+// <weight>: Use a value from 100 to 900
+// <uniquifier>: Use a unique and descriptive class name
+.raleway-<uniquifier> {
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+
+
+.alfa-slab-one-regular {
+  font-family: "Alfa Slab One", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+.tienne-regular {
+  font-family: "Tienne", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.tienne-bold {
+  font-family: "Tienne", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.tienne-black {
+  font-family: "Tienne", serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+
+*/
+
+
+
+/* ===== VARIABLES CSS ===== */
+:root {
+    /* Fuentes */
+    --font-Abril: 'Abril Fatface', serif;
+    /* Títulos destacados (ej: nombre) */
+    --font-heading:'Raleway', sans-serif;
+    /* Encabezados (h1, h2, h3) */
+    --font-subheading: 'Cormorant Garamond', serif;
+    /* Subtítulos y citas */
+    --font-body: 'Raleway', sans-serif;
+    /* Texto general */
+
+    /* Colores (ajusta según tu paleta) */
+    --color-dark: #2a2a2a;
+    --color-light: #ffffff;
+    --color-amarillo: #ffdb67;
+    --color-text: #333333;
+}
+
+/* ===== RESET BÁSICO ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    font-weight: 400;
+    line-height: 1.6;
+    color: var(--color-text);
+    background-color: #ffdb67;
+    /* Fondo amarillo */
+}
+
+/* ===== TIPOGRAFÍA JERÁRQUICA ===== *//*
+h1{
+    font-family: var(--font-Abril);
+    font-weight: 400;
+    letter-spacing: 1px;
+}*/
+
+h2,
+h3,
+h4 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    /* Playfair Display SC en negrita por defecto */
+    color: var(--color-amarillo);
+    margin-bottom: 0.5rem;
+}
+/*
+h1 {
+    font-size: 3rem;
+    font-weight: 900;
+    
+}*/
+
+h2 {
+    font-size: 2.2rem;
+    text-shadow: 2px 2px  #2a2a2a;
+}
+
+h3 {
+    font-size: 1.8rem;
+    font-weight: 400;
+    /* Regular para subtítulos */
+}
+
+/* Texto especial (ej: nombre en portada) */
+.display-font {
+    font-family: var(--font-Abril);
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+/* Citas o textos elegantes */
+.elegant-text {
+    font-family: var(--font-subheading);
+    font-style: italic;
+    font-weight: 300;
+}
+
+.display-raleway {
+    font-family: var(--font-body);
+    font-weight: 400;
+    line-height: 1.6;
+    color: var(--color-text);
+    background-color: #ffdb67;
+}
+
+/* Enlaces */
+a {
+    font-family: var(--font-body);
+    color: var(--color-dark);
+    text-decoration: none;
+    transition: color 0.3s ease;
+    
+}
+
+a:hover {
+    color: var(--color-amarillo);
+}
+
+/* ===== CLASES UTILITARIAS ===== */
+.text-center {
+    text-align: center;
+}
+
+.text-uppercase {
+    text-transform: uppercase;
+}
+
+/* Responsive: ajusta tamaños en móviles 
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+}
+*/

@@ -1,0 +1,11 @@
+<model-viewer src="Escultura_texturizada.glb" ar ar-modes="scene-viewer webxr quick-look" camera-controls tone-mapping="neutral" poster="poster.webp" shadow-intensity="1" exposure="1" environment-image="legacy" touch-action="pan-y" camera-orbit="calc(3rad + env(window-scroll-y) * 6.5rad) calc(90deg + env(window-scroll-y) * 0deg) 5m"">
+    <div class="progress-bar hide" slot="progress-bar">
+        <div class="update-bar"></div>
+    </div>
+    <button slot="ar-button" id="ar-button">
+        View in your space
+    </button>
+    <div id="ar-prompt">
+        <img src="https://modelviewer.dev/shared-assets/icons/hand.png">
+    </div>
+</model-viewer>

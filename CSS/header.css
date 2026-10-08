@@ -1,0 +1,315 @@
+header {
+    position: relative;
+    background-color: #2a2a2a;
+    padding: 20px;
+    z-index: 10;
+    
+}
+
+.caja-barras {
+    position: relative;
+}
+
+/* Icono hamburguesa */
+.menu-barras {
+    width: 35px;
+    height: 24px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+.menu-barras span {
+    height: 4px;
+    width: 100%;
+    background-color: white;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+
+}
+
+.menu-barras:hover span {
+    background-color: #ffdb67;
+}
+
+.menu-barras span:nth-child(1) {
+    top: calc(50% - 10px);
+}
+
+.menu-barras span:nth-child(2) {
+    top: 50%;
+
+}
+
+.menu-barras span:nth-child(3) {
+    top: calc(50% + 10px);
+}
+
+
+/* Activar animación a X */
+.menu-barras.active span:nth-child(1) {
+    transform: rotate(45deg);
+    top: 50%;
+}
+
+.menu-barras.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-barras.active span:nth-child(3) {
+    transform: rotate(-45deg);
+    top: 50%;
+}
+
+/* Estructura general del menú */
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 0;
+    background-color: #2a2a2a;
+    overflow: hidden;
+    transition: height 0.3s ease;
+    z-index: 10;
+}
+
+/* Al abrir el menú */
+.menu.open {
+    height: 100vh;
+}
+
+/* Contenedor del contenido del menú */
+.menu-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 40px 20px;
+    box-sizing: border-box;
+
+}
+
+/* Lista de enlaces */
+.menu-links {
+    list-style: none;
+    padding: 0;
+    margin: 10px;
+    text-align: center;
+    
+}
+
+.menu-links li {
+    margin: 55px;
+}
+
+.menu-links li a {
+    text-decoration: none;
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.menu-links li a:hover {
+    color: #ffdb67;
+}
+
+/* Iconos enlaces */
+.menu-social {
+    margin-top: 40px;
+    display: flex;
+    gap: 25px;
+    
+
+}
+
+.menu-social a {
+    font-size: 60px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    color: white;
+}
+
+.menu-social a:hover {
+    color: #ffdb67;
+}
+
+
+
+.submenuPadre {
+    position: relative;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: -50px;
+    background-color: #2a2a2a;
+    min-width: 200px;
+    opacity: 0;
+    transition: opacity 0.3s ease, visibility 0.3s;
+    visibility: hidden;
+    z-index: 10;
+    list-style: none;
+
+}
+
+.submenu.active {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Para evitar un desplazamiento en los li de submenu por la carpeta oculta creada al instalar bootstrap */
+ul{
+    padding-left: 0px !important;
+}
+
+/*************************
+        Responsive
+**************************/
+
+@media (max-width: 576px) {
+    .menu-content {
+        padding-bottom: 100px; 
+        justify-content: flex-start; 
+        padding-top: 60px; 
+    }
+    
+    .menu-links {
+        margin-bottom: 20px; 
+    }
+    
+    .menu-links li a {
+    font-size: 30px;
+    
+}
+    
+    .menu-social {
+        position: absolute;
+        bottom: 80px;
+        left: 0;
+        right: 0;
+        justify-content: center;
+        padding-bottom: 0;
+    }
+    
+    .menu-social a {
+    font-size: 40px;
+}
+    
+}
+
+@media (max-width: 991px) {
+    
+    .caja-barras{
+       width: 100%;
+        display: flex;
+        justify-content: center;   
+        align-items: center;          
+        padding: 10px 0;    
+}
+    
+    .menu {
+        transition: none !important; /* Desactiva transiciones al reducir pantalla */
+    }
+    
+   .submenuPadre .submenu{
+        display: none !important;
+    }
+}
+
+@media (min-width: 992px) {
+
+    /* Ocultar el icono de hamburguesa */
+    .menu-barras {
+        display: none;
+    }
+
+    /* Mostrar el menú permanentemente */
+    .menu {
+        position: static;
+        height: 100px;
+        width: 100%;
+        background-color: transparent;
+        padding: 0;
+        display: flex !important; /* Fuerza el modo escritorio */
+        height: auto !important;
+        justify-content: space-between;
+        align-items: center;
+        overflow: visible;
+
+    }
+
+    /* Reorganizar el contenido del menú */
+    .menu-content {
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+
+    /* Estilos para los enlaces del menú */
+    .menu-links {
+        display: flex;
+        margin: 0;
+    }
+
+    .menu-links li {
+        margin: 0 15px;
+        padding: 10px 0;
+    }
+
+    .menu-links li a {
+        font-size: 20px;
+    }
+
+    /* Estilos para los iconos de enlaces */
+    .menu-social {
+        align-content: flex-end;
+        margin-top: 0;
+        gap: 15px;
+    }
+
+    .menu-social a {
+        font-size: 34px;
+    }
+
+    /* Muestra el submenú al hacer hover */
+    .submenuPadre:hover .submenu {
+        display: block;
+        position: absolute;
+        top: 100%;
+        transform: none;
+
+    }
+
+    .submenu li {
+        margin: 0;
+        padding: 0;
+        position: relative;
+    }
+
+    .submenu li a {
+        font-size: 16px;
+        display: block;
+        padding: 10px 15px;
+        color: white;
+        text-decoration: none;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .submenu li a:hover {
+        font-size: 16px;
+        color: #2a2a2a;
+        background-color: #ffdb67;
+    }
+
+}
